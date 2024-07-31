@@ -3,7 +3,7 @@ import Drawer from "@mui/material/Drawer";
 import Button from "@mui/material/Button";
 import { CryptoState } from "../../CryptoContext";
 import { Avatar } from "@mui/material";
-import { styled, ThemeProvider, createTheme } from "@mui/material/styles";
+import { styled } from "@mui/material/styles";
 import { signOut } from "firebase/auth";
 import { auth, db } from "../../firebase";
 import { numberWithCommas } from "../Banner/Carousel";

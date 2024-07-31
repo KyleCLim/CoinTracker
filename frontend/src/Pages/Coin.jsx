@@ -18,9 +18,13 @@ const Coin = () => {
     const { currency, symbol, user, setAlert, watchlist } = CryptoState();
 
     const fetchCoin = async () => {
-        const { data } = await axios.get(SingleCoin(id));
+        try {
+            const { data } = await axios.get(SingleCoin(id));
 
-        setCoin(data);
+            setCoin(data);
+        } catch (error) {
+            console.log("Found error: ", error);
+        }
     };
 
     // console.log(coin);
